@@ -1,0 +1,664 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Exo+2|Noto+Sans+KR');
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    font-family: 'Noto Sans KR', 'sans-serif';
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a img {
+    border: none;
+}
+
+/* 하위버전 브라우저에 링크걸린 이미지 줄생김 현상 없애기 */
+
+/* header============ */
+
+#wrap {
+    width: 100%;
+}
+
+#wrap header {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* logo center menu right menu 가로정렬   */
+#wrap header .innerHeader {
+    width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#wrap header .innerHeader h1.logo {
+    width: 13%;
+}
+
+#wrap header .innerHeader h1.logo img {
+    margin-top: 25px;
+}
+
+
+
+#wrap header .innerHeader nav.gnb {
+    width: 50%;
+}
+
+#wrap header .innerHeader nav.gnb ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+#wrap header .innerHeader nav.gnb ul li a {
+    display: block;
+    font-size: 16px;
+    color: white;
+}
+
+#wrap header .innerHeader nav.gnb ul li a:hover,
+#wrap header .innerHeader nav.gnb ul li a:focus {
+    color: #ff8342;
+}
+
+
+#wrap header .innerHeader nav.tnb {
+    width: 37%;
+}
+
+#wrap header .innerHeader nav.tnb ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#wrap header .innerHeader nav.tnb ul li a {
+    display: block;
+    font-size: 16px;
+    color: white;
+}
+
+#wrap header .innerHeader nav.tnb ul li a:hover,
+#wrap header .innerHeader nav.tnb ul li a:focus {
+    color: #ff8342;
+}
+
+
+
+/* 제품검색아이콘 */
+#wrap header .innerHeader nav.tnb ul li:last-child(1) a i,
+#wrap header .innerHeader nav.tnb ul li:last-child(2) a i {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+/* 둥근사각형버튼 */
+#wrap header .innerHeader nav.tnb ul li:last-child a {
+    display: block;
+    border-radius: 30px;
+    margin-top: 35px;
+    border: 1px solid white;
+    width: 130px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    transition: .3s;
+}
+
+#wrap header .innerHeader nav.tnb ul li:last-child a i {
+    margin-left: 5px;
+}
+
+/*  main visual ================================ */
+
+#wrap section.main {
+    background: url("../imgs/vis_1.jpg") no-repeat center/cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    /* 모바일에서 오류가 나지 않게 하는 속성 넣어줌 (반으로 쪼개져 보이는 현상) */
+    min-width: 1400px;
+}
+
+#wrap section.main .mainTitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    letter-spacing: -1px;
+}
+
+#wrap section.main .mainTitle h2 {
+    font-size: 47px;
+    margin-bottom: 70px;
+    font-weight: normal;
+}
+
+#wrap section.main .mainTitle p {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+/* more 버튼  */
+#wrap section.main .mainTitle a.view {
+    display: block;
+    width: 180px;
+    padding: 8px 0;
+    font-size: 16px;
+    margin: 0 auto;
+    border: 2px solid white;
+    position: relative;
+    overflow: hidden;
+    /* 오버플로우 히든 마스크처리 기능 */
+    border-radius: 40px;
+}
+
+#wrap section.main .mainTitle a.view::after {
+    content: "";
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.4);
+    transition: .3s;
+}
+
+#wrap section.main .mainTitle a.view:hover::after,
+#wrap section.main .mainTitle a.view:focus::after {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+
+/* title 4종 전체 */
+
+.title {
+    font-family: 'Exo 2', 'sans-serif';
+    color: black;
+    text-align: center;
+}
+
+.title h2 {
+    font-size: 45px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.title h2 span {
+    color: #ff8342;
+}
+
+.title p {
+    color: #555;
+    font-size: 18px;
+}
+
+
+/* about============================ */
+#wrap section.about {
+    width: 100%;
+    background-color: white;
+    padding: 80px 0;
+    ;
+}
+
+#wrap section.about ul {
+    width: 1400px;
+    margin: 50px auto;
+    overflow: hidden;
+    min-width: 1400px;
+    display: flex;
+}
+
+#wrap section.about ul li {
+    width: 33.3333%;
+}
+
+#wrap section.about ul li a {
+    display: block;
+}
+
+#wrap section.about ul li a p.scale {
+    width: 100%;
+    height: 369px;
+    overflow: hidden;
+    /*마스크*/
+}
+
+#wrap section.about ul li a p.scale img {
+    width: 100%;
+    height: auto;
+    transition: .8s;
+}
+
+#wrap section.about ul li a:hover p.scale img {
+    transform: scale(1.2);
+}
+
+/* text */
+#wrap section.about ul li a .text {
+    padding: 30px 0 0 0;
+}
+
+#wrap section.about ul li a .text h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#wrap section.about ul li a .text p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#wrap section.about ul li a .text p.more {
+    font-weight: bold;
+    padding-left: 40px;
+    position: relative;
+}
+
+#wrap section.about ul li a .text p.more:hover {
+    color: rgba(0, 0, 0, 0.5)
+}
+
+#wrap section.about ul li a .text p.more:before {
+    content: "\f178";
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #ff8342;
+    font-family: FontAwesome;
+    border-radius: 50%;
+    position: absolute;
+    left: 1px;
+    padding-left: 0.4px;
+}
+
+
+/* 이노베이션=========================== */
+
+#wrap section.innovation {
+    width: 100%;
+    margin-bottom: 150px;
+    min-width: 1400px;
+    ;
+}
+
+#wrap section.innovation .imgBox {
+    width: 1400px;
+    height: 540px;
+    background: url("../imgs/product_1.jpg") no-repeat center/cover;
+    position: relative;
+    margin: 50px auto;
+}
+
+#wrap section.innovation .imgBox .inner {
+    position: absolute;
+    left: 50%;
+    bottom: -50px;
+    transform: translateX(-50%);
+    background-color: #3a3c4e;
+    width: 80%;
+}
+
+#wrap section.innovation .imgBox .inner h3 {
+    background-color: white;
+    padding: 25px 45px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+#wrap section.innovation .imgBox .inner h3 span {
+    color: #ff8342;
+}
+
+#wrap section.innovation .imgBox .inner .bottom {
+    color: white;
+    padding: 35px 85px;
+    line-height: 1.6;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+
+/* text */
+#wrap section.innovation .imgBox .inner .bottom p {
+    float: left;
+    margin-left: -5px;
+    font-size: 15px;
+}
+
+/* bottom */
+#wrap section.innovation .imgBox .inner .bottom a {
+    float: right;
+    display: block;
+    background-color: #ff8342;
+    border-radius: 50px;
+    transition: .5s;
+    padding: 7px 30px;
+    margin: 7px -10px 0 0;
+}
+
+#wrap section.innovation .imgBox .inner .bottom a:hover,
+#wrap section.innovation .imgBox .inner .bottom a:focus {
+    background-color: #f86010;
+}
+
+
+#wrap section.me {
+    width: 100%;
+    background: url("../imgs/me.jpg") no-repeat center/cover;
+    position: relative;
+    padding: 80px 0;
+    margin-bottom: 150px;
+    min-width: 1440px;
+}
+
+
+#wrap section.me .list {
+    width: 1400px;
+    margin: 50px auto;
+    border-top: 2px solid black;
+}
+
+#wrap section.me .list>ul {
+    padding-left: 30px;
+}
+
+#wrap section.me .list>ul>li {
+    padding: 30px 30px 30px 10px;
+    box-sizing: border-box;
+}
+
+#wrap section.me .list>ul>li:nth-child(1) {
+    border-bottom: 1px solid #ddd;
+}
+
+#wrap section.me .list>ul>li h3 {
+    font-size: 18px;
+    margin-top: 20px;
+    position: relative;
+    ;
+}
+
+#wrap section.me .list>ul>li h3>span {
+    position: absolute;
+    left: -25px;
+    color: #ff8342;
+}
+
+#wrap section.me .list>ul>li>p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#wrap section.me .list>ul>li>a.more {
+    display: block;
+    font-weight: bold;
+    position: relative;
+    font-size: 16px;
+}
+
+/* 화살표아이콘 */
+#wrap section.me .list>ul>li>a span {
+    position: absolute;
+    top: 3px;
+    margin-left: 5px;
+    font-size: 14px;
+    color: #ff8342;
+    ;
+}
+
+#wrap section.me .list>ul>li>a.more:hover {
+    opacity: 0.7;
+}
+
+#wrap section.me .list>ul>li>a.more:hover span i {
+    color: #f86010;
+}
+
+/* 상세리스트 */
+#wrap section.me .list ul.in {
+    margin-bottom: 30px;
+}
+
+#wrap section.me .list ul.in li {
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+#wrap section.me .list ul.in li em {
+    float: left;
+    width: 12%;
+}
+
+#wrap section.me .list ul.in li p {
+    float: left;
+    width: 88%;
+    position: relative;
+}
+
+/* 4px 점 */
+#wrap section.me .list ul.in li p:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -40px;
+    width: 4px;
+    height: 4px;
+    background-color: #ff8342;
+}
+
+/* 한화인 채용사이트버튼 */
+#wrap section.me .button {
+    position: absolute;
+    left: 50%;
+    top: 750px;
+    transform: translate(-50% -50%);
+}
+
+#wrap section.me .button a {
+    display: block;
+    background-color: #ff8342;
+    padding: 7px 30px;
+    text-align: center;
+    color: white;
+    transition: .5s;
+    border-radius: 50%;
+}
+
+#wrap section.me .button a:hover,
+#wrap section.me .button a:focus {
+    background-color: #f86010;
+}
+
+#wrap section.sns {
+    width: 100%;
+    height: 650px;
+    margin-bottom: 60px;
+}
+
+#wrap section.sns ul {
+    width: 1400px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#wrap section.sns ul li {
+    width: 32.5%;
+}
+
+/* #wrap section.sns ul li:last-child {margin: 0;} */
+#wrap section.sns ul li a {
+    display: block;
+    width: 100%;
+    height: 100px;
+}
+
+#wrap section.sns ul li a p.ani {
+    width: 100%;
+    height: 251px;
+    overflow: hidden;
+    position: relative;
+}
+
+#wrap section.sns ul li a p.ani:before {
+    content: "";
+    width: 0;
+    height: 100%;
+    background-color: rgba(255, 131, 66, 0.7);
+    transition: .5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#wrap section.sns ul li a p.ani img {
+    width: 100%;
+}
+
+#wrap section.sns ul li a:hover p.ani::before {
+    width: 100%;
+}
+
+#wrap section.sns ul li a p.ani::after #wrap section.sns ul li a:hover p.ani::after
+
+/* text */
+#wrap section.sns ul li a .snsBottom {
+    width: 100%;
+    padding: 30px 0 20px 0;
+    box-sizing: border-box;
+}
+
+#wrap section.sns ul li a .snsBottom p.color {
+    color: #ff8342;
+    font-weight: normal
+}
+
+#wrap section.sns ul li a .snsBottom p {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#wrap section.sns ul li a .snsBottom p.time {
+    font-weight: normal;
+    font-size: 15px;
+    margin-top: 30px;
+    padding-left: 20px;
+    position: relative;
+    color: #999;
+}
+
+#wrap section.sns ul li a .snsBottom p.time:before {
+    content: '\f017';
+    font-family: FontAwesome;
+    font-size: 15px;
+    position: absolute;
+    left: 0;
+    top: 5px;
+    ;
+}
+
+#wrap footer {
+    width: 100%;
+    border-top: 1px solid #999;
+    padding: 30px 0 50px 50px;
+    box-sizing: border-box;
+}
+
+
+
+
+#wrap footer .footerInner {
+    width: 1400px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#wrap footer .footerInner .blogo img {
+    margin-top: 10px;
+}
+
+#wrap footer .footerInner .copyright p {
+    color: #666;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#wrap footer .footerInner .copyright p a {
+    color: #ff8342;
+}
+
+#wrap footer .footerInner .copyright p a:hover {
+    color: #999;
+}
+
+#wrap footer .footerInner .blist ul {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+
+#wrap footer .footerInner .blist ul li a {
+    color: #333;
+    margin-top: 10px;
+    display: block;
+    font-weight: bold;
+}
+
+#wrap footer .footerInner .blist ul li a:hover {
+    color: #999;
+}
+
+/* 개인정보처리방침 */
+#wrap footer .footerInner .blist ul li:last-child a {
+    color: #ff8342;
+}
+
+#wrap footer .footerInner .blist ul li:last-child a:hover {
+    color: #999;
+}
